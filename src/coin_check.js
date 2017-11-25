@@ -17,6 +17,7 @@ var BankAccount = require('./bank_account.js');
 var Withdraw = require('./withdraw.js');
 var Borrow = require('./borrow.js');
 var Transfer = require('./transfer.js');
+var CandleRates = require('./candle_rates.js');
 
 function CoinCheck(accessKey, secretKey, options) {
     this.accessKey = accessKey;
@@ -37,6 +38,7 @@ function CoinCheck(accessKey, secretKey, options) {
     this.withdraw = new Withdraw.Withdraw(this);
     this.borrow = new Borrow.Borrow(this);
     this.transfer = new Transfer.Transfer(this);
+    this.candleRates = new CandleRates.CandleRates(this);
 }
 
 CoinCheck.prototype = {
@@ -71,6 +73,7 @@ CoinCheck.prototype = {
     _borrow: null,
     /** @var Transfer */
     _transfer: null,
+    _candleRates: null,
     _headers: {},
 
     setSignature: function (path, obj) {
