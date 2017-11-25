@@ -3,7 +3,7 @@ function CandleRates(coinCheck) {
 }
 
 CandleRates.prototype = {
-    urlRoot: 'exchange/candle_rates',
+    urlRoot: '/exchange/candle_rates',
     all: function(params) {
         return this._coinCheck.request('get', this.urlRoot, params);
     }

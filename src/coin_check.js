@@ -44,7 +44,7 @@ function CoinCheck(accessKey, secretKey, options) {
 CoinCheck.prototype = {
     VERSION: '0.1.0',
 
-    apiBase: 'coincheck.jp',
+    apiBase: 'coincheck.com',
     accessKey: null,
     secretKey: null,
 
